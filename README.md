@@ -25,4 +25,5 @@ Data in this repository are located in the "data/McGill-Billboard" branch. Each 
 ## Link to the slides
 
 slides:   https://bradenyang.github.io/final-project/yangby_final_project.slides.html
+
 nbviewer: https://nbviewer.jupyter.org/url/bradenyang.github.io/final-project/yangby_final_project.ipynb
