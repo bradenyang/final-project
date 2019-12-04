@@ -1,73 +1,20 @@
-# Final Project Template
+# BIOF509 Applied Machine Learning Final Project
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/py4ds/final-project/master?urlpath=lab/tree/final-project.ipynb)
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/py4ds/final-project/blob/master/final-project.ipynb)
+Braden Yang
+Fall 2019
 
-This repository contains a template for final projects.
+## Introduction and Problem Statement
 
-## How to Use this Template
+Every week since 1958, *Billboard* magazine compiles their list of the top 100 songs currently trending in the United States. Some songs are instant number one hits, while other songs barely crack the bottom of the chart. Some songs only appear on the chart for as little as one week, while other songs remain near the top for multiple weeks. But is there a secret formula in how a song is written that leads to success in getting to the top of the charts, particularly in the chord structure of a song?
 
-### Work in Binder
-- Launch a live notebook server with the notebook using [Binder](https://beta.mybinder.org/): [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/py4ds/final-project/master?urlpath=lab/tree/final-project.ipynb)
+In this BIOF509 Applied Machine Learning project, we will attempt to predict a song's peak rank attained in the *Billboard* Hot 100 chart (the **hotness index**) using information about the chord progressions it uses. We will also attempt to predict how long a song stays on the charts (the **catchiness index**) using the same chord progression features.
 
-### Work in Colab
-- Launch an executable version of the notebook using [Google Colab](http://colab.research.google.com): [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/py4ds/final-project/blob/master/final-project.ipynb)
+## The Dataset
 
-### Work locally (requires local installation of [git](https://git-scm.com/) and [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html))
-- Clone the repo using a shell (below) or [GitHub Desktop](https://desktop.github.com)
+Data was obtained from *The McGill Billboard Project*, which has released annotated text files on 890 total songs . Each text file, which is named "salami_chords.txt", contains full information about the chord structure of a song, along with the key it is in, the time signature, and the verse structure. Link to the data download and citation are listed below:
 
-```sh
-git clone https://github.com/py4ds/final-project
-cd final-project
-jupyter lab
-```
+https://ddmal.music.mcgill.ca/research/The_McGill_Billboard_Project_(Chord_Analysis_Dataset)/
 
-## Required packages
+    John Ashley Burgoyne, Jonathan Wild, and Ichiro Fujinaga, ‘An Expert Ground Truth Set for Audio Chord Recognition and Music Analysis’, in Proceedings of the 12th International Society for Music Information Retrieval Conference, ed. Anssi Klapuri and Colby Leider (Miami, FL, 2011), pp. 633–38, http://ismir2011.ismir.net/papers/OS8-1.pdf.
 
-The packages used to run the code in the Binder instances are listed in [requirements.txt](requirements.txt) (Note that some of these exact version numbers may not be available on your platform: you may have to tweak them for your own use).
-
-Edit the [requirements.txt](requirements.txt) file to meet the requirements of your project.
-
-To install the requirements using [pip](http://conda.pydata.org), run the following at the command-line:
-
-```sh
-$ pip install --requirement requirements.txt
-```
-
-To install the requirements using [conda](http://conda.pydata.org), run the following at the command-line:
-
-```sh
-$ conda install --file requirements.txt
-```
-
-To create a stand-alone environment named ``final-project`` with Python 3.6 and all the required package versions, run the following:
-
-```sh
-$ conda create -n final-project python=3.6 --file requirements.txt
-```
-
-You can read more about using conda environments in the [Managing Environments](http://conda.pydata.org/docs/using/envs.html) section of the conda documentation.
-
-## Git version control
-To use git in a Binder instance, you have to set up your username and email as below:
-
-```sh
-git config --global user.name "John Doe"
-git config --global user.email johndoe@example.com
-```
-
-To avoid doing this every time you use Binder, include your username and email in the [git_setup.sh](git_setup.sh) file, which will be run via [postBuild](postBuild) immediately after building the Binder instance.
-
-
-Every time you need to update the version of the [final-project.ipynb](final-project.ipynb) in your remote repo, run the following commands:
-
-```sh
-git add final-project.ipynb
-git commit -m "Update final-project.ipynb"
-git push
-```
-
-## License
-
-The code in this repository is released under the [MIT license](LICENSE-CODE). Read more at the [Open Source Initiative](https://opensource.org/licenses/MIT).
-
+Data in this repository are located in the "data/McGill-Billboard" branch. Each "salami_chords.txt" file is stored in a song-specific directory that is named the integer index that it was assigned in the database.
