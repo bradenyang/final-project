@@ -21,3 +21,8 @@ https://ddmal.music.mcgill.ca/research/The_McGill_Billboard_Project_(Chord_Analy
     John Ashley Burgoyne, Jonathan Wild, and Ichiro Fujinaga, ‘An Expert Ground Truth Set for Audio Chord Recognition and Music Analysis’, in Proceedings of the 12th International Society for Music Information Retrieval Conference, ed. Anssi Klapuri and Colby Leider (Miami, FL, 2011), pp. 633–38, http://ismir2011.ismir.net/papers/OS8-1.pdf.
 
 Data in this repository are located in the "data/McGill-Billboard" branch. Each "salami_chords.txt" file is stored in a song-specific directory that is named the integer index that it was assigned in the database.
+
+## Link to the slides
+
+slides:   https://bradenyang.github.io/final-project/yangby_final_project.slides.html
+nbviewer: https://nbviewer.jupyter.org/url/bradenyang.github.io/final-project/yangby_final_project.ipynb
