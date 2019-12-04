@@ -1,6 +1,9 @@
 # BIOF509 Applied Machine Learning Final Project
 
+Predicting a song's rank on the Billboard Hot 100 chart based on its chord structure
+
 Braden Yang
+
 Fall 2019
 
 ## Introduction and Problem Statement
